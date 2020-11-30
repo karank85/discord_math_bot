@@ -32,12 +32,12 @@ async def cosine(ctx, *, question):
     answer = cos(question)
     await ctx.send(f'Question: {question}\nAnswer: {answer}')
 
-@client.command()
+@client.command(aliases=['integrate'])
 async def int(ctx, *, question):
     x = symbols('x')
     answer = integrate(question)
     await ctx.send(f'Question: {"Integrate " + question + " dx"}\nAnswer: {answer}')
-@client.command()
+@client.command(aliases=['solve'])
 async def calc(ctx, question):
     answer = solve(question)
     await ctx.send(f'Question: {question}\n Answer: {answer}')
